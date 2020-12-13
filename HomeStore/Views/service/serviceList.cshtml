@@ -1,0 +1,27 @@
+﻿@model IEnumerable<HomeStore.Models.ServiceData>
+
+@{
+    ViewBag.Title = "serviceList";
+}
+    <div class="container p-4 my-4 border">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                  <center>  <h2 class="text-info"> View All Services</h2><br> </center> 
+                    @foreach (var item in Model)
+                    {
+                        <hr />
+                        <Div class="col-md-12">
+                            <h3> Service Name: @Html.DisplayFor(modelItem => item.Name)</h3>
+                            <hr />
+                            <p> Service Specification:: 
+                                @Html.DisplayFor(modelItem => item.Specification)
+                            </p>
+                        </Div>
+                    }
+
+                </div>
+            </div>
+        </div>
+        </div>
+

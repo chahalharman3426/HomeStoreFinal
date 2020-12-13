@@ -1,0 +1,28 @@
+﻿@model IEnumerable<HomeStore.Models.Customer>
+
+@{
+    ViewBag.Title = "happyCustomer";
+}
+
+    <div class="container p-4 my-4 border">
+        <div class="row">
+            <div class="col-md-auto">
+                <center> <b> <h1 class="text-info">Happy Customers</h1> </b></center>
+                <br>
+
+                <div class="row">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-12">
+                            <h2> Customer Name: @Html.DisplayFor(modelItem => item.Name)</h2>
+                            <h2> House Interested: @Html.DisplayFor(modelItem => item.HouseName)</h2>
+                            <h3> House Address:    @Html.DisplayFor(modelItem => item.Address)</h3>
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+        </div>
+        </div>

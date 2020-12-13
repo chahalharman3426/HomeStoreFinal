@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "adminPannel";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Welcome to the Admin Pannel </h1>
+        <hr />
+        <h2><a href="@Url.Action("viewCustomer","Customer")">Customer Pannel</a></h2>
+
+        <h2><a href="@Url.Action("viewService","service")">Service Pannel</a></h2>
+
+        <h2><a href="@Url.Action("viewFeedBack","Home")">Feed Back Pannel</a></h2>
+
+        <a href="@Url.Action("Index","Home")">Logout </a>
+    </div>
+
+</div>
+

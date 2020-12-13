@@ -1,0 +1,57 @@
+﻿@model IEnumerable<HomeStore.Models.feedBack>
+
+@{
+    ViewBag.Title = "viewFeedBack";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>View All Feed Back</h1>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mobile)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Subject)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message)
+                </th>
+                <th>Delete</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mobile)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subject)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Message)
+                    </td>
+                    <td>
+                        <h1 class="btn btn-primary">   @Html.ActionLink("Delete", "Delete", new { id = item.feedbackID })</h1>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+<a href="@Url.Action("adminPannel","admin")">Back to Admin Pannel </a>

@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      addEventListener("load", function () {
+      	setTimeout(hideURLbar, 0);
+      }, false);
+
+      function hideURLbar() {
+      	window.scrollTo(0, 1);
+      }
+    </script>
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="~/css/style.css" rel='stylesheet' type='text/css' media="all">
+    <!--//stylesheets-->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="main-top" id="home">
+        <!-- header -->
+        <div class="headder-top">
+            <div class="container-fluid">
+                <!-- nav -->
+                <nav>
+                    <div id="logo">
+                        <h1><a class="" href="@Url.Action("adminLogin","admin")">Buy Home </a></h1>
+                    </div>
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop">
+                    <ul class="menu mt-2">
+                        <li class="active"><a href="@Url.Action("Index","Home")">Home</a></li>
+                        <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="@Url.Action("About","Home")">About</a></li>
+                        <li><a href="@Url.Action("serviceList","service")">Services</a></li>
+                        <li><a href="@Url.Action("happyCustomer","Customer")">Clients</a></li>
+                        <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <!-- //nav -->
+            </div>
+        </div>
+        <!-- //header -->
+        <!-- banner -->
+        <div class="slider-img one-img text-center">
+            <div class="container">
+                <div class="slider-info">
+                    <h5>Use our site to find your home</h5>
+                    <div class="slider-banner">
+                        <h4>Find The Perfect Home</h4>
+                    </div>
+                    <div class="outs_more-buttn">
+                        <a href="#blog">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+    <div class="clearfix"></div>
+    <!-- //banner -->
+
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <!--map-->
+    <section class="map">
+        <div class="address_mail_footer_grids">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25262047.486749507!2d157.31722957400797!3d-39.384624941411914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d2c200e17779687%3A0xb1d618e2756a4733!2sNew%20Zealand!5e0!3m2!1sen!2sin!4v1607578518396!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+    <!--//map-->
+    <!--Footer-->
+    <footer class="py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
+        <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+            <div class="row">
+                <div class="col-lg-5 footer-left-grid">
+                    <div class="mb-lg-4 mb-3 footer-w3layouts-head">
+                        <h2><a href="index.html">Buy Home</a></h2>
+                    </div>
+
+                    <div class="mb-3 pt-lg-4 pt-3 footer-address">
+                        <h4>Get In Touch</h4>
+                    </div>
+                    <div class="footer_grid_left">
+                        <ul>
+                            <li>
+                                <span class="fa fa-map" aria-hidden="true"> </span>
+                                <p>
+                                    Hamilton st,QLD,New Zealand.
+                                </p>
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope-o" aria-hidden="true"> </span>
+                                <p>
+                                    <a href="mailto:info@example.com">buyhomes@admin.com</a>
+                                </p>
+                            </li>
+                            <li>
+                                <span class="fa fa-fax" aria-hidden="true"></span>
+                                <p>+64 656 989 575</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7 contact-form pb-lg-3 pb-2">
+                        
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#home" class="move-top txt-center mt-3"></a>
+            </div>
+            <div class="bottem-ile-footer text-center pt-lg-4 pt-3">
+                <p>
+                    © 2020 Home sales. All Rights Reserved | Design by <a href="#" target="_blank">Students</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--//Footer-->
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
